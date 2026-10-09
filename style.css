@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAADR | Decentralized AI Autonomous Democratic Republic</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="DAADR Logo" class="logo-img">
+            <div class="logo-text">DAADR <span class="tag">PILOT ZONE</span></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#mission" class="lang-cn">使命与愿景</a>
+                <a href="#mission" class="lang-en hidden">Mission</a>
+                
+                <a href="#values" class="lang-cn">立国基石</a>
+                <a href="#values" class="lang-en hidden">Values</a>
+                
+                <a href="#recruitment" class="lang-cn">创世招募</a>
+                <a href="#recruitment" class="lang-en hidden">Recruitment</a>
+
+                <a href="#donate" class="lang-cn">创世基金</a>
+                <a href="#donate" class="lang-en hidden">Genesis Fund</a>
+            </div>
+            <button id="lang-toggle" class="btn-lang">EN / 中文</button>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="container">
+            <h2 class="glitch" data-text="OS REWRITE">OS REWRITE</h2>
+            
+            <h1 class="lang-cn">去中心化 AI 自治<br>自由民主共和国</h1>
+            <h1 class="lang-en hidden">Decentralized AI Autonomous<br>Democratic Republic</h1>
+            
+            <p class="subtitle">Ver 2.0 Pilot Zone (20260929)</p>
+            
+            <p class="intro-text lang-cn">
+                终结“人为了生存而工作”的历史，开启“人为了梦想而创新”的新纪元。<br>
+                代码即宪法 · AI 为公仆 · 自由为终极目的
+            </p>
+            <p class="intro-text lang-en hidden">
+                End the history of working to survive, start a new era of innovating for dreams.<br>
+                Code as Constitution · AI as Public Servant · Freedom as Ultimate Purpose
+            </p>
+            
+            <div class="cta-group">
+                <a href="#recruitment" class="btn-primary lang-cn">加入创世团队</a>
+                <a href="#recruitment" class="btn-primary lang-en hidden">Join Genesis Team</a>
+                
+                <a href="#donate" class="btn-secondary lang-cn">参与创世募捐</a>
+                <a href="#donate" class="btn-secondary lang-en hidden">Genesis Donation</a>
+
+                <a href="https://daadr-pilot.github.io/C-Users-Administrator-Desktop-DAADR_Website/DAADR%20%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" class="btn-secondary lang-cn">阅读宣言 (PDF)</a>
+                <a href="https://daadr-pilot.github.io/C-Users-Administrator-Desktop-DAADR_Website/DAADR%20%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" class="btn-secondary lang-en hidden">Read Manifesto (PDF)</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="mission">
+        <div class="container">
+            <h3 class="lang-cn">使命与愿景 <span class="sub">Mission & Vision</span></h3>
+            <h3 class="lang-en hidden">Mission & Vision <span class="sub">The OS-Level Rebuild</span></h3>
+            
+            <div class="quote-box">
+                <p class="lang-cn">“用去中心化的 AI 辅助自治，重建一个没有独裁、没有腐败、没有特权与恐惧的新世界，彻底消灭独裁、专制、特权的土壤。”</p>
+                <p class="lang-en hidden">"To rebuild a new world free from dictatorship, corruption, privilege, and fear through decentralized AI-assisted self-governance, and to completely eradicate the soil that fosters tyranny, autocracy, and privilege."</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon">⚖️</div>
+                    <h4 class="lang-cn">绝决与重构</h4>
+                    <h4 class="lang-en hidden">OS-Level Rebuild</h4>
+                    <p class="lang-cn">不再修补锈迹斑斑的旧机器，我们在精神上与旧规则决裂，重写文明操作系统。</p>
+                    <p class="lang-en hidden">Break spiritually with decadent old rules and rewrite the operating system of human civilization.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💎</div>
+                    <h4 class="lang-cn">UBI 摆脱依附</h4>
+                    <h4 class="lang-en hidden">UBI & Independence</h4>
+                    <p class="lang-cn">通过 Token Staking 与 AI 分配，将机器财富无条件返还公民，彻底摆脱对统治阶层的依附。</p>
+                    <p class="lang-en hidden">Return AI-generated wealth unconditionally via Token Staking to eliminate class dependency.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🚀</div>
+                    <h4 class="lang-cn">生命意义跃迁</h4>
+                    <h4 class="lang-en hidden">Existential Leap</h4>
+                    <p class="lang-cn">不仅仅是消除贫困，更是为了彻底终结为生存而沦为奴役的历史，实现人皆可为梦想而活。</p>
+                    <p class="lang-en hidden">Not merely eliminating poverty, but empowering every individual to live freely for their dreams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="values" class="bg-dark">
+        <div class="container">
+            <h3 class="lang-cn">八大不可动摇的立国基石 <span class="sub">Core Values</span></h3>
+            <h3 class="lang-en hidden">8 Immutable Pillars <span class="sub">The Code Constitution</span></h3>
+
+            <div class="grid-4">
+                <div class="value-card">
+                    <span class="num">01</span>
+                    <h4 class="lang-cn">放下历史，面向未来</h4>
+                    <h4 class="lang-en hidden">Future Oriented</h4>
+                    <p class="lang-cn">让历史成为参考而非枷锁，消除种族与历史仇恨，在全球共识中避免对抗。</p>
+                    <p class="lang-en hidden">Treat history as reference rather than chains; eliminate racial and historical animosities.</p>
+                </div>
+                <div class="value-card">
+                    <span class="num">02</span>
+                    <h4 class="lang-cn">走出传统，拥抱现代</h4>
+                    <h4 class="lang-en hidden">Modern Civilization</h4>
+                    <p class="lang-cn">基于民主、自由、平等、人权建立数字契约，以 AI 驱动塑造现代公民。</p>
+                    <p class="lang-en hidden">Establish digital compacts rooted in universal values and AI-driven education.</p>
+                </div>
+                <div class="value-card">
+                    <span class="num">03</span>
+                    <h4 class="lang-cn">自由与民主 —— 杜绝专制</h4>
+                    <h4 class="lang-en hidden">Liberty & Democracy</h4>
+                    <p class="lang-cn">杜绝任何权力凌驾于公民之上。任何形式的独裁与暴政都将被代码所禁止。</p>
+                    <p class="lang-en hidden">Forbid any form of autocracy or privilege by immutable code.</p>
+                </div>
+                <div class="value-card">
+                    <span class="num">04</span>
+                    <h4 class="lang-cn">平等与包容 —— 拒绝特权</h4>
+                    <h4 class="lang-en hidden">Equality & Inclusivity</h4>
+                    <p class="lang-cn">无论性别、信仰、种族，平等享有权利与机会，拒绝任何特权阶层。</p>
+                    <p class="lang-en hidden">Reject all privileged classes; guarantee equal rights and opportunities for all.</p>
+                </div>
+                <div class="value-card">
+                    <span class="num">05</span>
+                    <h4 class="lang-cn">透明与公正 —— 防止暴政</h4>
+                    <h4 class="lang-en hidden">Transparency & Justice</h4>
+                    <p class="lang-cn">区块链可追溯配合 AI 公正，全面透明可审计，让暴政在阳光下无处藏身。</p>
+                    <p class="lang-en hidden">Fully transparent and auditable governance; leave tyranny no place to hide.</p>
+                </div>
+                <div class="value-card">
+                    <span class="num">06</span>
+                    <h4 class="lang-cn">去中心化 AI 辅助自治</h4>
+                    <h4 class="lang-en hidden">Decentralized AI Governance</h4>
+                    <p class="lang-cn">去中心化架构结合区块链共享平台，彻底斩断权力垄断，确保分权制衡。</p>
+                    <p class="lang-en hidden">Break centralized power monopolies through decentralized architecture and checks.</p>
+                </div>
+                <div class="value-card highlight">
+                    <span class="num">07</span>
+                    <h4 class="lang-cn">全民基本收入 (UBI)</h4>
+                    <h4 class="lang-en hidden">Universal Basic Income</h4>
+                    <p class="lang-cn">Token Staking 与 AI 无条件分配财富，从“为生计而拼搏”转变为“为梦想而奋斗”。</p>
+                    <p class="lang-en hidden">Unconditionally return machine wealth to transition from survival to innovation.</p>
+                </div>
+                <div class="value-card">
+                    <span class="num">08</span>
+                    <h4 class="lang-cn">持续创新 —— 抵御僵化</h4>
+                    <h4 class="lang-en hidden">Continuous Evolution</h4>
+                    <p class="lang-cn">制度是自我迭代的“活体”，AI 驱动制度进化，保证自由与公平永不退步。</p>
+                    <p class="lang-en hidden">Self-iterating system driven by AI to ensure freedom and justice never regress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 创世团队招募 -->
+    <section id="recruitment">
+        <div class="container">
+            <h3 class="lang-cn">创世团队招募 <span class="sub">Genesis Recruitment</span></h3>
+            <h3 class="lang-en hidden">Genesis Recruitment <span class="sub">Build the Foundation</span></h3>
+            
+            <div class="vision-box">
+                <p class="lang-cn">我们正在招募认同 DAADR 价值观，且具备<strong>资金、技术、法律、设计、管理与宣传能力</strong>的先驱者加入创世团队：</p>
+                <p class="lang-en hidden">We are recruiting pioneers with <strong>funding, technical, legal, design, and management expertise</strong> to join the Genesis Team:</p>
+                
+                <ul class="vision-list">
+                    <li>
+                        <strong class="lang-cn">💰 创世资金合伙人：</strong> <span class="lang-cn">为早期基础设施、服务器及法务合规提供资金与资源支持。</span>
+                        <strong class="lang-en hidden">💰 Funding Partners:</strong> <span class="lang-en hidden">Provide resources for early infrastructure, servers, and legal compliance.</span>
+                    </li>
+                    <li>
+                        <strong class="lang-cn">💻 核心 AI / 区块链架构师：</strong> <span class="lang-cn">开发去中心化 AI 治理 Agent、智能合约与 UBI 财富分配合约。</span>
+                        <strong class="lang-en hidden">💻 AI & Web3 Architects:</strong> <span class="lang-en hidden">Develop AI governance agents, smart contracts, and UBI mechanisms.</span>
+                    </li>
+                    <li>
+                        <strong class="lang-cn">⚖️ 法律与 DAO 合规专家：</strong> <span class="lang-cn">探索去中心化试验区、跨国 DAO 实体的合法边界与宪章保护。</span>
+                        <strong class="lang-en hidden">⚖️ Legal & Governance Experts:</strong> <span class="lang-en hidden">Explore international legal boundaries and DAO charter frameworks.</span>
+                    </li>
+                    <li>
+                        <strong class="lang-cn">🎨 设计与全球宣发共识官：</strong> <span class="lang-cn">负责赛博视觉、品牌传播、多语言翻译及共识社区搭建。</span>
+                        <strong class="lang-en hidden">🎨 Design & Community Leaders:</strong> <span class="lang-en hidden">Lead visual identity, multilingual translations, and global consensus growth.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 创世基金募捐 -->
+    <section id="donate" class="bg-dark">
+        <div class="container">
+            <h3 class="lang-cn">救国与创世基金募捐 <span class="sub">Genesis Crowdfunding</span></h3>
+            <h3 class="lang-en hidden">Genesis Crowdfunding <span class="sub">Transparent & On-Chain</span></h3>
+            
+            <div class="quote-box" style="border-left-color: #00f2fe;">
+                <p class="lang-cn">“借鉴孙中山救国募捐模式，所有资金全额用于 DAADR 开源公共物品建设，链上全程透明可追溯。”</p>
+                <p class="lang-en hidden">"Referencing historic fundraising models, all funds are transparently dedicated to DAADR public infrastructure."</p>
+            </div>
+
+            <div class="card" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px; border: 1px solid rgba(0,242,254,0.2);">
+                <h4 class="lang-cn" style="color:#00f2fe; margin-top:0;">多链透明捐赠地址 / Multi-chain Donation Vault</h4>
+                <p class="lang-cn" style="font-family: monospace; color: #fff; word-break: break-all;">
+                    ETH / USDT / USDC (ERC20): <br>
+                    <span style="color:#00f2fe;">0x0000000000000000000000000000000000000000</span>
+                </p>
+                <p class="lang-en hidden" style="font-family: monospace; color: #fff; word-break: break-all;">
+                    ETH / USDT / USDC (ERC20): <br>
+                    <span style="color:#00f2fe;">0x0000000000000000000000000000000000000000</span>
+                </p>
+                <p class="lang-cn" style="font-size: 0.85rem; color: #888;">* 凡参与创世捐赠与贡献者，将永恒记录于 GitHub <code>GENESIS_CONTRIBUTORS.md</code> 荣誉墙中。</p>
+                <p class="lang-en hidden" style="font-size: 0.85rem; color: #888;">* All contributors will be permanently recorded in GitHub <code>GENESIS_CONTRIBUTORS.md</code>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="join">
+        <div class="container">
+            <h2 class="lang-cn">加入这场文明实验</h2>
+            <h2 class="lang-en hidden">Join the Civilization Experiment</h2>
+            
+            <p class="lang-cn">在旧时代的废墟之上，用代码搭建通往星辰大海的阶梯。</p>
+            <p class="lang-en hidden">Upon the ruins of the old era, let us build a ladder of code to the stars.</p>
+            
+            <div class="social-links">
+                <a href="https://x.com/ZUIucgQImBFYaf2" target="_blank" class="btn-primary">Twitter (X)</a>
+                <a href="https://github.com/daadr-pilot" target="_blank" class="btn-secondary">GitHub</a>
+            </div>
+            
+            <p class="copyright">© 2025-2026 DAADR Temporary Committee. Powered by Code & Consensus.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const cnElements = document.querySelectorAll('.lang-cn');
+            const enElements = document.querySelectorAll('.lang-en');
+            
+            cnElements.forEach(el => el.classList.toggle('hidden'));
+            enElements.forEach(el => el.classList.toggle('hidden'));
+        });
+    </script>
+</body>
+</html>
