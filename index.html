@@ -4,14 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAADR | Decentralized AI Autonomous Democratic Republic</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 内嵌全套赛博朋克深色样式 */
+        :root {
+            --bg-color: #080c14;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --card-hover: rgba(30, 41, 59, 0.9);
+            --accent-color: #00f2fe;
+            --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: rgba(0, 242, 254, 0.2);
+        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0; padding: 0;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        
+        /* 导航栏 */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem; background: rgba(8, 12, 20, 0.9);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px);
+        }
+        .logo-text { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.5rem; color: #fff; }
+        .tag { font-size: 0.7rem; background: rgba(0, 242, 254, 0.15); color: var(--accent-color); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--accent-color); }
+        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; margin-left: 1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-color); }
+        .btn-lang { background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-family: 'Orbitron', sans-serif; }
+        
+        /* Hero 区域 */
+        header#hero { text-align: center; padding: 5rem 1rem 3rem; }
+        .glitch { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--accent-color); letter-spacing: 3px; margin-bottom: 0.5rem; }
+        h1 { font-size: 2.8rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.5rem 0; line-height: 1.2; }
+        .subtitle { font-family: 'Orbitron', sans-serif; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .intro-text { font-size: 1.1rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 2rem; }
+        .cta-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        
+        .btn-primary, .btn-secondary {
+            padding: 0.8rem 1.6rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block;
+        }
+        .btn-primary { background: var(--accent-gradient); color: #000; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.05); color: var(--text-color); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
+        
+        /* 通用 Section */
+        section { margin: 4rem 0; }
+        h3 { font-size: 1.8rem; color: #fff; margin-bottom: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 0.8rem; }
+        .sub { font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--text-muted); font-weight: normal; margin-left: 0.5rem; }
+        
+        .quote-box { background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; font-size: 1.1rem; }
+        
+        /* 网格布局 */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+        
+        .card, .value-card, .vision-box {
+            background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.5rem; transition: all 0.3s ease;
+        }
+        .card:hover, .value-card:hover { background: var(--card-hover); transform: translateY(-3px); }
+        .value-card .num { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 700; opacity: 0.8; }
+        .value-card.highlight { border-color: var(--accent-color); background: rgba(0, 242, 254, 0.05); }
+        
+        .vision-list { list-style: none; padding: 0; }
+        .vision-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; }
+        .vision-list li::before { content: "►"; position: absolute; left: 0; color: var(--accent-color); }
+        
+        footer { text-align: center; padding: 4rem 1rem 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
+        .social-links { margin: 1.5rem 0; display: flex; justify-content: center; gap: 1rem; }
+        .hidden { display: none !important; }
+    </style>
 </head>
 <body>
 
     <nav>
         <div class="logo-container">
-            <img src="logo.png" alt="DAADR Logo" class="logo-img">
             <div class="logo-text">DAADR <span class="tag">PILOT ZONE</span></div>
         </div>
         <div class="nav-right">
@@ -34,7 +110,7 @@
 
     <header id="hero">
         <div class="container">
-            <h2 class="glitch" data-text="OS REWRITE">OS REWRITE</h2>
+            <h2 class="glitch">OS REWRITE</h2>
             
             <h1 class="lang-cn">去中心化 AI 自治<br>自由民主共和国</h1>
             <h1 class="lang-en hidden">Decentralized AI Autonomous<br>Democratic Republic</h1>
@@ -46,7 +122,7 @@
                 代码即宪法 · AI 为公仆 · 自由为终极目的
             </p>
             <p class="intro-text lang-en hidden">
-                End the history of working to survive, start a new era of innovating for dreams.<br>
+                End working to survive, start innovating for dreams.<br>
                 Code as Constitution · AI as Public Servant · Freedom as Ultimate Purpose
             </p>
             
@@ -75,23 +151,20 @@
 
             <div class="grid-3">
                 <div class="card">
-                    <div class="icon">⚖️</div>
-                    <h4 class="lang-cn">绝决与重构</h4>
-                    <h4 class="lang-en hidden">OS-Level Rebuild</h4>
+                    <h4 class="lang-cn">⚖️ 绝决与重构</h4>
+                    <h4 class="lang-en hidden">⚖️ OS-Level Rebuild</h4>
                     <p class="lang-cn">不再修补锈迹斑斑的旧机器，我们在精神上与旧规则决裂，重写文明操作系统。</p>
                     <p class="lang-en hidden">Break spiritually with decadent old rules and rewrite the operating system of human civilization.</p>
                 </div>
                 <div class="card">
-                    <div class="icon">💎</div>
-                    <h4 class="lang-cn">UBI 摆脱依附</h4>
-                    <h4 class="lang-en hidden">UBI & Independence</h4>
+                    <h4 class="lang-cn">💎 UBI 摆脱依附</h4>
+                    <h4 class="lang-en hidden">💎 UBI & Independence</h4>
                     <p class="lang-cn">通过 Token Staking 与 AI 分配，将机器财富无条件返还公民，彻底摆脱对统治阶层的依附。</p>
                     <p class="lang-en hidden">Return AI-generated wealth unconditionally via Token Staking to eliminate class dependency.</p>
                 </div>
                 <div class="card">
-                    <div class="icon">🚀</div>
-                    <h4 class="lang-cn">生命意义跃迁</h4>
-                    <h4 class="lang-en hidden">Existential Leap</h4>
+                    <h4 class="lang-cn">🚀 生命意义跃迁</h4>
+                    <h4 class="lang-en hidden">🚀 Existential Leap</h4>
                     <p class="lang-cn">不仅仅是消除贫困，更是为了彻底终结为生存而沦为奴役的历史，实现人皆可为梦想而活。</p>
                     <p class="lang-en hidden">Not merely eliminating poverty, but empowering every individual to live freely for their dreams.</p>
                 </div>
@@ -99,7 +172,7 @@
         </div>
     </section>
 
-    <section id="values" class="bg-dark">
+    <section id="values">
         <div class="container">
             <h3 class="lang-cn">八大不可动摇的立国基石 <span class="sub">Core Values</span></h3>
             <h3 class="lang-en hidden">8 Immutable Pillars <span class="sub">The Code Constitution</span></h3>
@@ -165,7 +238,6 @@
         </div>
     </section>
 
-    <!-- 创世团队招募 -->
     <section id="recruitment">
         <div class="container">
             <h3 class="lang-cn">创世团队招募 <span class="sub">Genesis Recruitment</span></h3>
@@ -197,26 +269,25 @@
         </div>
     </section>
 
-    <!-- 创世基金募捐 -->
-    <section id="donate" class="bg-dark">
+    <section id="donate">
         <div class="container">
             <h3 class="lang-cn">救国与创世基金募捐 <span class="sub">Genesis Crowdfunding</span></h3>
             <h3 class="lang-en hidden">Genesis Crowdfunding <span class="sub">Transparent & On-Chain</span></h3>
             
-            <div class="quote-box" style="border-left-color: #00f2fe;">
+            <div class="quote-box">
                 <p class="lang-cn">“借鉴孙中山救国募捐模式，所有资金全额用于 DAADR 开源公共物品建设，链上全程透明可追溯。”</p>
                 <p class="lang-en hidden">"Referencing historic fundraising models, all funds are transparently dedicated to DAADR public infrastructure."</p>
             </div>
 
-            <div class="card" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 8px; border: 1px solid rgba(0,242,254,0.2);">
-                <h4 class="lang-cn" style="color:#00f2fe; margin-top:0;">多链透明捐赠地址 / Multi-chain Donation Vault</h4>
+            <div class="card" style="background: rgba(0,0,0,0.6); border: 1px solid var(--accent-color);">
+                <h4 class="lang-cn" style="color:var(--accent-color); margin-top:0;">多链透明捐赠地址 / Multi-chain Donation Vault</h4>
                 <p class="lang-cn" style="font-family: monospace; color: #fff; word-break: break-all;">
                     ETH / USDT / USDC (ERC20): <br>
-                    <span style="color:#00f2fe;">0x0000000000000000000000000000000000000000</span>
+                    <span style="color:var(--accent-color);">0x0000000000000000000000000000000000000000</span>
                 </p>
                 <p class="lang-en hidden" style="font-family: monospace; color: #fff; word-break: break-all;">
                     ETH / USDT / USDC (ERC20): <br>
-                    <span style="color:#00f2fe;">0x0000000000000000000000000000000000000000</span>
+                    <span style="color:var(--accent-color);">0x0000000000000000000000000000000000000000</span>
                 </p>
                 <p class="lang-cn" style="font-size: 0.85rem; color: #888;">* 凡参与创世捐赠与贡献者，将永恒记录于 GitHub <code>GENESIS_CONTRIBUTORS.md</code> 荣誉墙中。</p>
                 <p class="lang-en hidden" style="font-size: 0.85rem; color: #888;">* All contributors will be permanently recorded in GitHub <code>GENESIS_CONTRIBUTORS.md</code>.</p>
