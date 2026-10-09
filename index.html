@@ -4,83 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAADR | Decentralized AI Autonomous Democratic Republic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* 内嵌全套赛博朋克深色样式，无需外部 style.css */
         :root {
-            --bg-color: #080c14;
-            --card-bg: rgba(15, 23, 42, 0.75);
-            --card-hover: rgba(30, 41, 59, 0.9);
+            --bg-color: #060911;
+            --card-bg: rgba(13, 20, 36, 0.85);
+            --card-hover: rgba(22, 34, 60, 0.95);
             --accent-color: #00f2fe;
             --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             --text-color: #f1f5f9;
             --text-muted: #94a3b8;
             --border-color: rgba(0, 242, 254, 0.25);
+            --border-glow: 0 0 15px rgba(0, 242, 254, 0.2);
         }
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body {
             font-family: 'Noto Sans SC', -apple-system, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.7;
+            line-height: 1.8;
             margin: 0; padding: 0;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 100% 50%, rgba(79, 172, 254, 0.05) 0%, transparent 50%);
         }
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .container { max-width: 1150px; margin: 0 auto; padding: 2rem 1.5rem; }
         
         /* 导航栏 */
         nav {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 2rem; background: rgba(8, 12, 20, 0.95);
+            padding: 1rem 2rem; background: rgba(6, 9, 17, 0.95);
             border-bottom: 1px solid var(--border-color);
-            position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px);
         }
-        .logo-text { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.5rem; color: #fff; }
-        .tag { font-size: 0.75rem; background: rgba(0, 242, 254, 0.15); color: var(--accent-color); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--accent-color); font-weight: bold; }
+        .logo-text { font-family: 'Orbitron', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; letter-spacing: 1px; }
+        .tag { font-size: 0.75rem; background: rgba(0, 242, 254, 0.15); color: var(--accent-color); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--accent-color); font-weight: bold; margin-left: 8px; }
         .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; margin-left: 1rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent-color); }
-        .btn-lang { background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-weight: bold; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; margin-left: 1.2rem; transition: all 0.3s; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent-color); text-shadow: 0 0 8px rgba(0,242,254,0.5); }
+        .btn-lang { background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); padding: 0.4rem 0.9rem; border-radius: 4px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-weight: bold; transition: all 0.3s; }
+        .btn-lang:hover { background: var(--accent-color); color: #000; box-shadow: var(--border-glow); }
         
         /* Hero 头部 */
-        header#hero { text-align: center; padding: 5rem 1rem 3rem; background: radial-gradient(circle at top, rgba(0,242,254,0.1) 0%, transparent 70%); }
-        .glitch { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--accent-color); letter-spacing: 3px; margin-bottom: 0.5rem; text-shadow: 0 0 10px rgba(0,242,254,0.5); }
-        h1 { font-size: 2.8rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.5rem 0; line-height: 1.2; font-weight: 700; }
-        .subtitle { font-family: 'Orbitron', sans-serif; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
-        .intro-text { font-size: 1.1rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 2rem; }
-        .cta-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        header#hero { text-align: center; padding: 6rem 1rem 4rem; position: relative; }
+        .glitch { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; color: var(--accent-color); letter-spacing: 4px; margin-bottom: 0.5rem; text-shadow: 0 0 12px rgba(0,242,254,0.6); font-weight: 700; }
+        h1 { font-size: 3rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.5rem 0; line-height: 1.25; font-weight: 800; }
+        .subtitle { font-family: 'Orbitron', sans-serif; color: var(--text-muted); font-size: 1.15rem; margin-bottom: 1.8rem; letter-spacing: 1px; }
+        .intro-text { font-size: 1.15rem; color: #cbd5e1; max-width: 850px; margin: 0 auto 2rem; font-weight: 300; }
+        .cta-group { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-top: 2rem; }
         
         .btn-primary, .btn-secondary {
-            padding: 0.8rem 1.6rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block;
+            padding: 0.85rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; display: inline-block; font-size: 0.95rem;
         }
-        .btn-primary { background: var(--accent-gradient); color: #000; box-shadow: 0 0 15px rgba(0,242,254,0.3); }
-        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 0 25px rgba(0,242,254,0.5); }
-        .btn-secondary { background: rgba(255, 255, 255, 0.05); color: var(--text-color); border: 1px solid var(--border-color); }
-        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); border-color: var(--accent-color); }
+        .btn-primary { background: var(--accent-gradient); color: #000; box-shadow: 0 0 20px rgba(0,242,254,0.3); }
+        .btn-primary:hover { opacity: 0.95; transform: translateY(-3px); box-shadow: 0 0 30px rgba(0,242,254,0.6); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.04); color: var(--text-color); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-3px); border-color: var(--accent-color); box-shadow: var(--border-glow); }
         
         /* 内容区块 */
-        section { margin: 4rem 0; }
-        h3 { font-size: 1.8rem; color: #fff; margin-bottom: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 0.8rem; }
-        .sub { font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--text-muted); font-weight: normal; margin-left: 0.5rem; }
+        section { margin: 5rem 0; }
+        h3 { font-size: 2rem; color: #fff; margin-bottom: 1.8rem; border-left: 4px solid var(--accent-color); padding-left: 1rem; font-weight: 700; }
+        .sub { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; color: var(--text-muted); font-weight: normal; margin-left: 0.6rem; }
         
-        .quote-box { background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; font-size: 1.1rem; border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .quote-box { background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 1.8rem; border-radius: 0 10px 10px 0; margin-bottom: 2.5rem; font-size: 1.15rem; border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); box-shadow: var(--border-glow); }
         
         /* 网格 */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
         
         .card, .value-card, .vision-box {
-            background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.5rem; transition: all 0.3s ease;
+            background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.8rem; transition: all 0.3s ease;
         }
-        .card:hover, .value-card:hover { background: var(--card-hover); transform: translateY(-3px); border-color: var(--accent-color); }
-        .value-card .num { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 700; opacity: 0.8; margin-bottom: 0.5rem; display: block; }
-        .value-card.highlight { border-color: var(--accent-color); background: rgba(0, 242, 254, 0.08); box-shadow: 0 0 15px rgba(0,242,254,0.15); }
+        .card:hover, .value-card:hover { background: var(--card-hover); transform: translateY(-4px); border-color: var(--accent-color); box-shadow: var(--border-glow); }
+        .card h4, .value-card h4 { font-size: 1.2rem; color: var(--accent-color); margin-top: 0.5rem; margin-bottom: 0.8rem; }
+        .card p, .value-card p { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 0.5rem; }
+        .en-sub { color: var(--text-muted); font-size: 0.85rem; font-style: italic; margin-top: 0.4rem; display: block; }
+
+        .value-card .num { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; color: var(--accent-color); font-weight: 800; display: block; }
+        .value-card.highlight { border-color: var(--accent-color); background: rgba(0, 242, 254, 0.08); box-shadow: 0 0 20px rgba(0,242,254,0.15); }
         
-        .vision-list { list-style: none; padding: 0; }
-        .vision-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #cbd5e1; }
+        .vision-list { list-style: none; padding: 0; margin: 0; }
+        .vision-list li { margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative; color: #cbd5e1; font-size: 1.05rem; }
         .vision-list li::before { content: "►"; position: absolute; left: 0; color: var(--accent-color); }
         
-        footer { text-align: center; padding: 4rem 1rem 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
-        .social-links { margin: 1.5rem 0; display: flex; justify-content: center; gap: 1rem; }
+        /* 捐赠框 */
+        .donate-box { background: rgba(0,0,0,0.6); border: 1px solid var(--accent-color); box-shadow: var(--border-glow); border-radius: 12px; padding: 2rem; margin-top: 1.5rem; }
+        .code-address { font-family: 'Courier New', monospace; font-size: 1.1rem; color: var(--accent-color); background: rgba(0,242,254,0.1); padding: 0.8rem; border-radius: 6px; border: 1px dashed var(--accent-color); word-break: break-all; margin: 1rem 0; }
+
+        footer { text-align: center; padding: 4rem 1rem 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.95rem; }
+        .social-links { margin: 1.8rem 0; display: flex; justify-content: center; gap: 1.2rem; }
         .hidden { display: none !important; }
     </style>
 </head>
@@ -115,33 +127,34 @@
             <h1 class="lang-cn">去中心化 AI 自治<br>自由民主共和国</h1>
             <h1 class="lang-en hidden">Decentralized AI Autonomous<br>Democratic Republic</h1>
             
-            <p class="subtitle">Ver 2.0 Pilot Zone (20260929)</p>
+            <p class="subtitle">Ver 2.0 Pilot Zone (20260929 Revision)</p>
             
             <p class="intro-text lang-cn">
-                终结“人为了生存而工作”的历史，开启“人为了梦想而创新”的新纪元。<br>
-                代码即宪法 · AI 为公仆 · 自由为终极目的
+                彻底终结“人为了生存而工作”的历史，开启“人为了梦想而创新”的新纪元。<br>
+                <strong>代码即宪法 · AI 为公仆 · 自由为终极目的</strong>
             </p>
             <p class="intro-text lang-en hidden">
-                End working to survive, start innovating for dreams.<br>
-                Code as Constitution · AI as Public Servant · Freedom as Ultimate Purpose
+                To definitively end the history of "working to survive" and usher in a new era of "innovating for dreams."<br>
+                <strong>Code as Constitution · AI as Public Servant · Freedom as Ultimate Purpose</strong>
             </p>
             
             <div class="cta-group">
-                <a href="#recruitment" class="btn-primary lang-cn">加入创世团队</a>
+                <a href="#recruitment" class="btn-primary lang-cn">申请加入创世团队</a>
                 <a href="#recruitment" class="btn-primary lang-en hidden">Join Genesis Team</a>
                 
-                <a href="#donate" class="btn-secondary lang-cn">参与创世募捐</a>
-                <a href="#donate" class="btn-secondary lang-en hidden">Genesis Donation</a>
+                <a href="#donate" class="btn-secondary lang-cn">参与创世基金募捐</a>
+                <a href="#donate" class="btn-secondary lang-en hidden">Genesis Crowdfunding</a>
 
-                <a href="https://daadr-pilot.github.io/C-Users-Administrator-Desktop-DAADR_Website/DAADR%20%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" class="btn-secondary lang-cn">阅读宣言 (PDF)</a>
+                <a href="https://daadr-pilot.github.io/C-Users-Administrator-Desktop-DAADR_Website/DAADR%20%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" class="btn-secondary lang-cn">阅读创世书 (PDF)</a>
                 <a href="https://daadr-pilot.github.io/C-Users-Administrator-Desktop-DAADR_Website/DAADR%20%E7%8B%AC%E7%AB%8B%E5%AE%A3%E8%A8%80%E4%B8%8E%E5%88%9B%E4%B8%96%E4%B9%A6.pdf" target="_blank" class="btn-secondary lang-en hidden">Read Manifesto (PDF)</a>
             </div>
         </div>
     </header>
 
+    <!-- 使命与愿景 -->
     <section id="mission">
         <div class="container">
-            <h3 class="lang-cn">使命与愿景 <span class="sub">Mission & Vision</span></h3>
+            <h3 class="lang-cn">核心使命与宏大愿景 <span class="sub">Mission & Vision</span></h3>
             <h3 class="lang-en hidden">Mission & Vision <span class="sub">The OS-Level Rebuild</span></h3>
             
             <div class="quote-box">
@@ -151,27 +164,28 @@
 
             <div class="grid-3">
                 <div class="card">
-                    <h4 class="lang-cn">⚖️ 决裂与重构</h4>
+                    <h4 class="lang-cn">⚖️ 决裂与操作系统重构</h4>
                     <h4 class="lang-en hidden">⚖️ OS-Level Rebuild</h4>
-                    <p class="lang-cn">不再修补锈迹斑斑的旧机器，我们在精神上与旧规则决裂，重写文明操作系统。</p>
-                    <p class="lang-en hidden">Break spiritually with decadent old rules and rewrite the operating system of human civilization.</p>
+                    <p class="lang-cn">不再修补锈迹斑斑的旧机器，我们在精神上与旧规则决裂，用区块链与去中心化 AI 重新编写社会操作系统。</p>
+                    <span class="en-sub">Break spiritually with decadent old rules; rewrite the operating system of human civilization using code and AI.</span>
                 </div>
                 <div class="card">
-                    <h4 class="lang-cn">💎 UBI 摆脱依附</h4>
-                    <h4 class="lang-en hidden">💎 UBI & Independence</h4>
-                    <p class="lang-cn">通过 Token Staking 与 AI 分配，将机器财富无条件返还公民，彻底摆脱对统治阶层的依附。</p>
-                    <p class="lang-en hidden">Return AI-generated wealth unconditionally via Token Staking to eliminate class dependency.</p>
+                    <h4 class="lang-cn">💎 UBI 经济解放</h4>
+                    <h4 class="lang-en hidden">💎 Economic Liberation (UBI)</h4>
+                    <p class="lang-cn">通过 Token Staking 与智能合约分配，将机器创造的财富无条件返还每一位公民，消除依附关系与生存恐惧。</p>
+                    <span class="en-sub">Return machine-generated wealth unconditionally via Token Staking to guarantee survival dignity and eliminate class dependency.</span>
                 </div>
                 <div class="card">
-                    <h4 class="lang-cn">🚀 生命意义跃迁</h4>
+                    <h4 class="lang-cn">🚀 生命意义根本跃迁</h4>
                     <h4 class="lang-en hidden">🚀 Existential Leap</h4>
-                    <p class="lang-cn">不仅仅是消除贫困，更是为了彻底终结为生存而沦为奴役的历史，实现人皆可为梦想而活。</p>
-                    <p class="lang-en hidden">Not merely eliminating poverty, but empowering every individual to live freely for their dreams.</p>
+                    <p class="lang-cn">不仅仅是消除贫困，更是推动人类从“为生计而沦为奴役”转向“为了梦想与自我实现而自由创新”。</p>
+                    <span class="en-sub">Propel a fundamental leap in human existential purpose: from survival enslavement to freedom of creative self-actualization.</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 八大立国基石 -->
     <section id="values">
         <div class="container">
             <h3 class="lang-cn">八大不可动摇的立国基石 <span class="sub">Core Values</span></h3>
@@ -183,132 +197,134 @@
                     <h4 class="lang-cn">放下历史，面向未来</h4>
                     <h4 class="lang-en hidden">Future Oriented</h4>
                     <p class="lang-cn">让历史成为参考而非枷锁，消除种族与历史仇恨，在全球共识中避免对抗。</p>
-                    <p class="lang-en hidden">Treat history as reference rather than chains; eliminate racial and historical animosities.</p>
+                    <span class="en-sub">Treat history as reference rather than chains; eliminate racial animosities via global consensus.</span>
                 </div>
                 <div class="value-card">
                     <span class="num">02</span>
-                    <h4 class="lang-cn">走出传统，拥抱现代</h4>
+                    <h4 class="lang-cn">走出传统，拥抱现代文明</h4>
                     <h4 class="lang-en hidden">Modern Civilization</h4>
-                    <p class="lang-cn">基于民主、自由、平等、人权建立数字契约，以 AI 驱动塑造现代公民。</p>
-                    <p class="lang-en hidden">Establish digital compacts rooted in universal values and AI-driven education.</p>
+                    <p class="lang-cn">基于民主、自由、平等、人权建立数字契约。以 AI 驱动塑造具有全球视野的公民。</p>
+                    <span class="en-sub">Establish digital compacts rooted in universal values and AI-driven global education.</span>
                 </div>
                 <div class="value-card">
                     <span class="num">03</span>
                     <h4 class="lang-cn">自由与民主 —— 杜绝专制</h4>
                     <h4 class="lang-en hidden">Liberty & Democracy</h4>
-                    <p class="lang-cn">杜绝任何权力凌驾于公民之上。任何形式的独裁与暴政都将被代码所禁止。</p>
-                    <p class="lang-en hidden">Forbid any form of autocracy or privilege by immutable code.</p>
+                    <p class="lang-cn">杜绝任何个人或中心化权力凌驾于公民之上。任何形式的独裁都将被代码硬性禁止。</p>
+                    <span class="en-sub">Preclude any entity from standing above civil liberties. Autocracy is forbidden by immutable code.</span>
                 </div>
                 <div class="value-card">
                     <span class="num">04</span>
                     <h4 class="lang-cn">平等与包容 —— 拒绝特权</h4>
                     <h4 class="lang-en hidden">Equality & Inclusivity</h4>
-                    <p class="lang-cn">无论性别、信仰、种族，平等享有权利与机会，拒绝任何特权阶层。</p>
-                    <p class="lang-en hidden">Reject all privileged classes; guarantee equal rights and opportunities for all.</p>
+                    <p class="lang-cn">无论性别、信仰、种族或背景，公民平等享有权利。坚决拒绝任何特权阶层。</p>
+                    <span class="en-sub">Guarantee equal rights regardless of background; resolutely reject all privileged classes.</span>
                 </div>
                 <div class="value-card">
                     <span class="num">05</span>
                     <h4 class="lang-cn">透明与公正 —— 防止暴政</h4>
                     <h4 class="lang-en hidden">Transparency & Justice</h4>
-                    <p class="lang-cn">区块链可追溯配合 AI 公正，全面透明可审计，让暴政在阳光下无处藏身。</p>
-                    <p class="lang-en hidden">Fully transparent and auditable governance; leave tyranny no place to hide.</p>
+                    <p class="lang-cn">区块链全程可追溯配合 AI 公正治理，没有秘密统治，让暴政在阳光下无处藏身。</p>
+                    <span class="en-sub">Fully transparent and auditable governance; leave tyranny and secret rule no place to hide.</span>
                 </div>
                 <div class="value-card">
                     <span class="num">06</span>
                     <h4 class="lang-cn">去中心化 AI 辅助自治</h4>
                     <h4 class="lang-en hidden">Decentralized AI Governance</h4>
-                    <p class="lang-cn">去中心化架构结合区块链共享平台，彻底斩断权力垄断，确保分权制衡。</p>
-                    <p class="lang-en hidden">Break centralized power monopolies through decentralized architecture and checks.</p>
+                    <p class="lang-cn">以去中心化架构与区块链共享平台打破权力垄断，确保分权制衡与民主自治。</p>
+                    <span class="en-sub">Break centralized monopolies via decentralized architecture to guarantee checks and balances.</span>
                 </div>
                 <div class="value-card highlight">
                     <span class="num">07</span>
-                    <h4 class="lang-cn">全民基本收入 (UBI)</h4>
+                    <h4 class="lang-cn">全民基本收入 (UBI) 制度</h4>
                     <h4 class="lang-en hidden">Universal Basic Income</h4>
-                    <p class="lang-cn">Token Staking 与 AI 无条件分配财富，从“为生计而拼搏”转变为“为梦想而奋斗”。</p>
-                    <p class="lang-en hidden">Unconditionally return machine wealth to transition from survival to innovation.</p>
+                    <p class="lang-cn">Token Staking 与 AI 无条件分发财富，消除生存危机，实现为梦想而奋斗。</p>
+                    <span class="en-sub">Unconditionally return machine wealth to enable the shift from survival to creative passion.</span>
                 </div>
                 <div class="value-card">
                     <span class="num">08</span>
-                    <h4 class="lang-cn">持续创新 —— 抵御僵化</h4>
+                    <h4 class="lang-cn">持续创新 —— 抵御制度僵化</h4>
                     <h4 class="lang-en hidden">Continuous Evolution</h4>
-                    <p class="lang-cn">制度是自我迭代的“活体”，AI 驱动制度进化，保证自由与公平永不退步。</p>
-                    <p class="lang-en hidden">Self-iterating system driven by AI to ensure freedom and justice never regress.</p>
+                    <p class="lang-cn">制度是自我迭代的“活体”，以 AI 驱动制度自我演进，保证自由与公平永不退步。</p>
+                    <span class="en-sub">Self-iterating systemic framework driven by AI to ensure freedom and justice never regress.</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 创世团队招募 -->
     <section id="recruitment">
         <div class="container">
             <h3 class="lang-cn">创世团队招募 <span class="sub">Genesis Recruitment</span></h3>
             <h3 class="lang-en hidden">Genesis Recruitment <span class="sub">Build the Foundation</span></h3>
             
             <div class="vision-box">
-                <p class="lang-cn">我们正在招募认同 DAADR 价值观，且具备<strong>资金、技术、法律、设计、管理与宣传能力</strong>的先驱者加入创世团队：</p>
-                <p class="lang-en hidden">We are recruiting pioneers with <strong>funding, technical, legal, design, and management expertise</strong> to join the Genesis Team:</p>
+                <p class="lang-cn" style="font-size: 1.1rem; margin-bottom: 1.5rem;">我们正在全球范围内招募认同 DAADR 价值观，且具备以下专业能力与资源的创世先驱：</p>
+                <p class="lang-en hidden" style="font-size: 1.1rem; margin-bottom: 1.5rem;">We are recruiting pioneers globally with specialized skills to join the Genesis Team:</p>
                 
                 <ul class="vision-list">
                     <li>
-                        <strong class="lang-cn">💰 创世资金合伙人：</strong> <span class="lang-cn">为早期基础设施、服务器及法务合规提供资金与资源支持。</span>
-                        <strong class="lang-en hidden">💰 Funding Partners:</strong> <span class="lang-en hidden">Provide resources for early infrastructure, servers, and legal compliance.</span>
+                        <strong class="lang-cn">💰 资金合伙人与创世捐赠者 (Genesis Donors)：</strong><br>
+                        <span class="lang-cn">资助早期公共基础设施建设、服务器集群维护及跨国法务合规费用。</span>
+                        <span class="lang-en hidden">Provide early funding for public infrastructure, server clusters, and international legal compliance.</span>
                     </li>
                     <li>
-                        <strong class="lang-cn">💻 核心 AI / 区块链架构师：</strong> <span class="lang-cn">开发去中心化 AI 治理 Agent、智能合约与 UBI 财富分配合约。</span>
-                        <strong class="lang-en hidden">💻 AI & Web3 Architects:</strong> <span class="lang-en hidden">Develop AI governance agents, smart contracts, and UBI mechanisms.</span>
+                        <strong class="lang-cn">💻 核心 AI & 区块链架构师 (Core Tech & Web3 Architects)：</strong><br>
+                        <span class="lang-cn">负责去中心化 Agent 治理逻辑编写、Token Staking 智能合约开发及 Web3 全栈系统构建。</span>
+                        <span class="lang-en hidden">Develop AI agent governance logic, Token Staking smart contracts, and Web3 full-stack systems.</span>
                     </li>
                     <li>
-                        <strong class="lang-cn">⚖️ 法律与 DAO 合规专家：</strong> <span class="lang-cn">探索去中心化试验区、跨国 DAO 实体的合法边界与宪章保护。</span>
-                        <strong class="lang-en hidden">⚖️ Legal & Governance Experts:</strong> <span class="lang-en hidden">Explore international legal boundaries and DAO charter frameworks.</span>
+                        <strong class="lang-cn">⚖️ 法律与 DAO 治理专家 (Legal & DAO Advisors)：</strong><br>
+                        <span class="lang-cn">探索去中心化试验区、跨国 DAO 实体边界，为数字共和国宪法与制度演进提供合规保障。</span>
+                        <span class="lang-en hidden">Explore international legal boundaries for DAO entities and safeguard the digital constitution.</span>
                     </li>
                     <li>
-                        <strong class="lang-cn">🎨 设计与全球宣发共识官：</strong> <span class="lang-cn">负责赛博视觉、品牌传播、多语言翻译及共识社区搭建。</span>
-                        <strong class="lang-en hidden">🎨 Design & Community Leaders:</strong> <span class="lang-en hidden">Lead visual identity, multilingual translations, and global consensus growth.</span>
+                        <strong class="lang-cn">🎨 UI/UX 设计与全球共识运营官 (Design & Community Leaders)：</strong><br>
+                        <span class="lang-cn">主导赛博视觉表达、多语言宣发媒介制作及全球社区治理与共识凝聚。</span>
+                        <span class="lang-en hidden">Lead cyberpunk visual identity, multilingual translations, and global community consensus.</span>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- 创世基金募捐 -->
     <section id="donate">
         <div class="container">
             <h3 class="lang-cn">救国与创世基金募捐 <span class="sub">Genesis Crowdfunding</span></h3>
             <h3 class="lang-en hidden">Genesis Crowdfunding <span class="sub">Transparent & On-Chain</span></h3>
             
             <div class="quote-box">
-                <p class="lang-cn">“借鉴孙中山救国募捐模式，所有资金全额用于 DAADR 开源公共物品建设，链上全程透明可追溯。”</p>
-                <p class="lang-en hidden">"Referencing historic fundraising models, all funds are transparently dedicated to DAADR public infrastructure."</p>
+                <p class="lang-cn">“参照孙中山救国募捐模式，所有资金将全额透明用于 DAADR 公共物品建设与开源基础设施开发，资金流动链上全程公开可追溯。”</p>
+                <p class="lang-en hidden">"Referencing historic fundraising models, all funds are transparently dedicated to DAADR public infrastructure and on-chain governance development."</p>
             </div>
 
-            <div class="card" style="background: rgba(0,0,0,0.6); border: 1px solid var(--accent-color);">
-                <h4 class="lang-cn" style="color:var(--accent-color); margin-top:0;">多链透明捐赠地址 / Multi-chain Donation Vault</h4>
-                <p class="lang-cn" style="font-family: monospace; color: #fff; word-break: break-all;">
-                    ETH / USDT / USDC (ERC20): <br>
-                    <span style="color:var(--accent-color);">0x0000000000000000000000000000000000000000</span>
-                </p>
-                <p class="lang-en hidden" style="font-family: monospace; color: #fff; word-break: break-all;">
-                    ETH / USDT / USDC (ERC20): <br>
-                    <span style="color:var(--accent-color);">0x0000000000000000000000000000000000000000</span>
-                </p>
-                <p class="lang-cn" style="font-size: 0.85rem; color: #888;">* 凡参与创世捐赠与贡献者，将永恒记录于 GitHub <code>GENESIS_CONTRIBUTORS.md</code> 荣誉墙中。</p>
-                <p class="lang-en hidden" style="font-size: 0.85rem; color: #888;">* All contributors will be permanently recorded in GitHub <code>GENESIS_CONTRIBUTORS.md</code>.</p>
+            <div class="donate-box">
+                <h4 class="lang-cn" style="color:var(--accent-color); margin-top:0; font-size:1.2rem;">多链链上公开捐赠地址 / Multi-chain Donation Vault</h4>
+                <p class="lang-cn" style="color:#aaa; font-size:0.95rem;">接受以太坊及主流 Layer 2 网络的 ETH / USDT / USDC 捐赠：</p>
+                <div class="code-address">
+                    0x0000000000000000000000000000000000000000
+                </div>
+                <p class="lang-cn" style="font-size: 0.88rem; color: #888;">* 凡参与早期创世捐赠者，其贡献将永恒铭刻于 GitHub 官方仓库的 <code>GENESIS_CONTRIBUTORS.md</code> 创世荣誉墙中。</p>
+                <p class="lang-en hidden" style="font-size: 0.88rem; color: #888;">* All contributors will be permanently engraved in the GitHub official <code>GENESIS_CONTRIBUTORS.md</code> honor wall.</p>
             </div>
         </div>
     </section>
 
     <footer id="join">
         <div class="container">
-            <h2 class="lang-cn">加入这场文明实验</h2>
+            <h2 class="lang-cn">加入这场文明试验</h2>
             <h2 class="lang-en hidden">Join the Civilization Experiment</h2>
             
-            <p class="lang-cn">在旧时代的废墟之上，用代码搭建通往星辰大海的阶梯。</p>
-            <p class="lang-en hidden">Upon the ruins of the old era, let us build a ladder of code to the stars.</p>
+            <p class="lang-cn" style="font-size:1.1rem; color:#cbd5e1;">在旧时代的废墟之上，用代码搭建通往星辰大海与绝对自由的阶梯。</p>
+            <p class="lang-en hidden" style="font-size:1.1rem; color:#cbd5e1;">Upon the ruins of the old era, let us build a ladder of code to the stars and absolute freedom.</p>
             
             <div class="social-links">
                 <a href="https://x.com/ZUIucgQImBFYaf2" target="_blank" class="btn-primary">Twitter (X)</a>
-                <a href="https://github.com/daadr-pilot" target="_blank" class="btn-secondary">GitHub</a>
+                <a href="https://github.com/daadr-pilot" target="_blank" class="btn-secondary">GitHub 仓库</a>
             </div>
             
-            <p class="copyright">© 2025-2026 DAADR Temporary Committee. Powered by Code & Consensus.</p>
+            <p class="copyright">© 2025-2026 DAADR 临时委员会 | 去中心化 AI 自治自由民主共和国（试验区）<br>Powered by Code & Consensus.</p>
         </div>
     </footer>
 
