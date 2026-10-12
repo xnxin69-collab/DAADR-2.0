@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAADR Pitch Deck | 去中心化 AI 自治自由民主共和国</title>
+  
+  <!-- reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  
+  <!-- 数学公式支持 -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <style>
+    :root {
+      --r-background-color: #0a0a0f;
+      --r-main-font: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --r-heading-font: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --r-main-color: #e2e8f0;
+      --r-heading-color: #f8fafc;
+      --r-link-color: #38bdf8;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+    }
+    
+    .reveal {
+      font-size: 32px;
+    }
+    
+    .reveal h1, .reveal h2, .reveal h3 {
+      text-transform: none;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    .reveal h1 { font-size: 2.4em; }
+    .reveal h2 { font-size: 1.7em; margin-bottom: 0.6em; }
+    .reveal h3 { font-size: 1.25em; color: var(--accent); }
+    
+    .reveal .slides section {
+      text-align: left;
+      padding: 40px 60px;
+    }
+    
+    .center { text-align: center !important; }
+    
+    .big-title {
+      font-size: 2.8em !important;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.3em;
+    }
+    
+    .subtitle {
+      font-size: 1.15em;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+    
+    .tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.7em;
+      margin-right: 8px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+    }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    
+    .highlight {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    
+    .quote {
+      font-size: 1.25em;
+      font-style: italic;
+      color: #cbd5e1;
+      border-left: 4px solid #38bdf8;
+      padding-left: 24px;
+      margin: 30px 0;
+    }
+    
+    .formula {
+      background: rgba(56, 189, 248, 0.08);
+      border-radius: 12px;
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 1.3em;
+      margin: 25px 0;
+    }
+    
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    
+    .timeline-item {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border-radius: 12px;
+      padding: 18px 16px;
+      border-top: 3px solid #38bdf8;
+    }
+    
+    .timeline-item h4 {
+      color: #38bdf8;
+      margin: 0 0 8px 0;
+      font-size: 0.95em;
+    }
+    
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      right: 60px;
+      font-size: 0.55em;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .red-line {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 12px;
+      padding: 20px 28px;
+      color: #fca5a5;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ==================== Slide 1: 封面 ==================== -->
+      <section class="center" data-background-gradient="linear-gradient(160deg, #0a0a0f 0%, #0f172a 50%, #1e1b4b 100%)">
+        <div style="margin-top: 80px;">
+          <div class="tag">Ver 2.0X2</div>
+          <div class="tag">2025 Genesis Year One</div>
+        </div>
+        
+        <h1 class="big-title" style="margin-top: 40px;">DAADR</h1>
+        <h2 style="font-size: 1.5em; margin-top: 10px;">去中心化 AI 自治自由民主共和国</h2>
+        <p class="subtitle" style="margin-top: 30px;">
+          从《独立宣言与创世书 2.0X2》走向真实文明试验的工程落地规划
+        </p>
+        
+        <p style="margin-top: 80px; font-size: 0.95em; color: #94a3b8;">
+          代码即宪法 · AI 为公仆 · 自由为终极目的
+        </p>
+        
+        <p style="margin-top: 40px; font-size: 0.75em; color: #64748b;">
+          在旧时代的废墟之上，用代码搭建通往星辰大海的阶梯
+        </p>
+      </section>
+
+      <!-- ==================== Slide 2: 痛点 ==================== -->
+      <section>
+        <h2>时代悖论与痛点</h2>
+        <h3>丰盛时代的囚徒</h3>
+        
+        <div class="card" style="margin-top: 30px;">
+          人类科技与 AI 生产力已高度繁荣，本具备让全人类告别匮乏的能力。<br>
+          却因<strong class="highlight">少数人的贪婪与中心化垄断</strong>，将科技红利锁死在金库中，<br>
+          迫使大众深陷「失业焦虑」与「生存奴役」。
+        </div>
+        
+        <div class="grid-2" style="margin-top: 30px;">
+          <div class="card">
+            <strong>独裁的根源</strong><br>权力的垄断
+          </div>
+          <div class="card">
+            <strong>专制的工具</strong><br>黑箱操作
+          </div>
+          <div class="card">
+            <strong>特权的本质</strong><br>寻租剥削
+          </div>
+          <div class="card">
+            <strong>阶级的牢笼</strong><br>经济依附
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== Slide 3: 解决方案 ==================== -->
+      <section>
+        <h2>解决方案：什么是 DAADR？</h2>
+        
+        <div class="card" style="margin: 25px 0;">
+          全球首个以<strong class="highlight">去中心化治理为根基、代码为宪法、AI 为公仆、自由为终极目的</strong>的数字自治试验区。
+        </div>
+        
+        <h3 style="margin-top: 40px;">三大根本解放</h3>
+        <div class="grid-3" style="margin-top: 20px;">
+          <div class="card">
+            <strong style="color:#38bdf8;">政治解放</strong><br>
+            重写社会操作系统<br>
+            让独裁无法编译
+          </div>
+          <div class="card">
+            <strong style="color:#38bdf8;">经济解放</strong><br>
+            UBI 无条件返还机器红利<br>
+            消除生存依附
+          </div>
+          <div class="card">
+            <strong style="color:#38bdf8;">精神解放</strong><br>
+            终结「为生计挣扎」<br>
+            开启「为梦想创新」
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== Slide 4: 架构 ==================== -->
+      <section>
+        <h2>组织双层架构与运行逻辑</h2>
+        <p style="color:#94a3b8; margin-bottom: 30px;">「公司化运营 + 去中心化治理」的双层分离模型</p>
+        
+        <div class="grid-2">
+          <div class="card" style="border-top: 3px solid #38bdf8;">
+            <h3 style="margin-top:0;">第一层 · 执行层</h3>
+            <strong>Genesis Studio</strong><br><br>
+            产品研发 · AI 训练<br>
+            技术落地 · 法务合规<br>
+            融资宣发<br><br>
+            <span style="color:#94a3b8; font-size:0.85em;">强调效率与结果</span>
+          </div>
+          <div class="card" style="border-top: 3px solid #818cf8;">
+            <h3 style="margin-top:0;">第二层 · 治理层</h3>
+            <strong>Citizen DAO</strong><br><br>
+            提案表决 · 金库监督<br>
+            宪章修改权<br><br>
+            <span style="color:#94a3b8; font-size:0.85em;">强调透明与制衡</span>
+          </div>
+        </div>
+        
+        <div class="quote" style="margin-top: 40px;">
+          项目运营中心负责把车造出来，社区公民决定车开往哪里。
+        </div>
+      </section>
+
+      <!-- ==================== Slide 5: 技术 ==================== -->
+      <section>
+        <h2>技术与 AI 公仆矩阵</h2>
+        
+        <div class="grid-2" style="margin-top: 20px;">
+          <div>
+            <h3>高可靠抗攻击技术栈</h3>
+            <div class="card">
+              <strong>ZK-DID / SBT</strong><br>
+              零知识身份系统<br>
+              保障一人一票（1P1V）抗女巫，同时保护现实隐私
+            </div>
+            <div class="card">
+              <strong>二次方投票</strong><br>
+              Cost = v²<br>
+              有效防止资本巨鲸操纵社区表决
+            </div>
+          </div>
+          
+          <div>
+            <h3>AI 公仆协议</h3>
+            <div class="card">
+              <strong>AI 治理助手</strong>（无投票权）<br>
+              智能归纳提案、拆解争议、模拟政策影响
+            </div>
+            <div class="card">
+              <strong>AI 金库审计助手</strong><br>
+              7×24 小时链上实时审计，公共财税 100% 透明
+            </div>
+            <div class="card">
+              <strong>宪章阻断 Agent</strong><br>
+              对违背八大立国基石的提案实施代码级拦截
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== Slide 6: 经济模型 ==================== -->
+      <section>
+        <h2>UBI 经济模型与价值捕获</h2>
+        
+        <h3>资金来源</h3>
+        <div class="grid-3" style="margin: 15px 0 30px;">
+          <div class="card" style="text-align:center;">商业化 AI Agent<br>+ 开源 B2B 工具盈利</div>
+          <div class="card" style="text-align:center;">链上生态手续费<br>+ 节点质押抽成</div>
+          <div class="card" style="text-align:center;">创世基金募捐<br>+ Public Goods Grants</div>
+        </div>
+        
+        <h3>无条件分配机制</h3>
+        <div class="formula">
+          \[ \text{UBI}_i = \frac{\text{金库总收益} \times 60\%}{N} \]
+        </div>
+        
+        <p style="text-align:center; color:#94a3b8;">
+          确保公民摆脱生存恐慌，实现向创造性创新的文明跃迁
+        </p>
+      </section>
+
+      <!-- ==================== Slide 7: 路线图 ==================== -->
+      <section>
+        <h2>三年实操路线图（2026–2029）</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>2026</h4>
+            <strong>创世组建期</strong><br>
+            冻结宣言 2.0X2<br>
+            组建 7–10 人核心团队<br>
+            发布白皮书 & GitHub
+          </div>
+          <div class="timeline-item">
+            <h4>2027</h4>
+            <strong>MVP 与试点</strong><br>
+            上线 Governance MVP<br>
+            启动 100 人 Pilot Zone
+          </div>
+          <div class="timeline-item">
+            <h4>2028</h4>
+            <strong>治理移交期</strong><br>
+            下放提案与金库权<br>
+            扩充至 1,000–5,000 人
+          </div>
+          <div class="timeline-item">
+            <h4>2029+</h4>
+            <strong>开放自治网络</strong><br>
+            触发创始人日落条款<br>
+            完全代码 + 共识自运转
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== Slide 8: 团队与日落 ==================== -->
+      <section>
+        <h2>创始人日落与团队共识</h2>
+        
+        <div class="card" style="margin: 25px 0;">
+          <strong>创始人权力日落条款（Founder Sunset Clause）</strong><br><br>
+          早期执行权 → 中期创世委员会共同决策 → 后期社区全面接管 → 成熟期创始人转为荣誉宪章顾问，彻底消除终身集权。
+        </div>
+        
+        <h3>「五项共识」人才准入门槛</h3>
+        <div class="grid-3" style="margin-top: 15px;">
+          <div class="card" style="text-align:center;">防垄断</div>
+          <div class="card" style="text-align:center;">AI 公仆论</div>
+          <div class="card" style="text-align:center;">规则平等</div>
+          <div class="card" style="text-align:center;">全链透明</div>
+          <div class="card" style="text-align:center;">权力退出</div>
+        </div>
+        <p style="margin-top: 20px; color:#94a3b8;">核心贡献者必须通过五大思想考核，拒绝投机主义。</p>
+      </section>
+
+      <!-- ==================== Slide 9: 资金红线 ==================== -->
+      <section>
+        <h2>资金战略与资本红线</h2>
+        
+        <h3>资金支持方向</h3>
+        <div class="card">
+          早期专注于开源生态 Grants（Gitcoin、Optimism RPGF 等）及影响圈天使捐赠。
+        </div>
+        
+        <h3 style="margin-top: 40px;">不可动摇的资本红线</h3>
+        <div class="red-line">
+          <strong>治理权与经济权严格分离</strong><br><br>
+          任何投资者可享有代币分红或经济权益，但<strong>绝不能通过资金量直接购买治理票权</strong>。<br>
+          公民身份与投票权永远属于个人。
+        </div>
+      </section>
+
+      <!-- ==================== Slide 10: 结语 ==================== -->
+      <section class="center" data-background-gradient="linear-gradient(160deg, #0a0a0f 0%, #0f172a 50%, #1e1b4b 100%)">
+        <h2 style="margin-bottom: 40px;">终极成功指标</h2>
+        
+        <div class="quote" style="font-size: 1.35em; border: none; text-align: center; padding: 0;">
+          即便创始人与创世团队全员离场，<br>
+          DAADR 是否依然能依靠代码宪法与社区共识<br>
+          无腐败地永续运转？
+        </div>
+        
+        <p style="margin-top: 60px; font-size: 1.1em;">
+          让我们在旧时代的废墟之上，<br>
+          用代码搭建通往星辰大海的阶梯。
+        </p>
+        
+        <p style="margin-top: 40px; font-size: 1.25em; color: #38bdf8; font-weight: 600;">
+          让我们告诉未来：在这个时代，<br>
+          人类没有选择沉沦，我们选择了升华。
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0.08,
+      math: {
+        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+        config: 'TeX-AMS_HTML-full'
+      }
+    });
+  </script>
+</body>
+</html>
