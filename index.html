@@ -233,38 +233,53 @@
         </div>
     </section>
 
-    <!-- 5. 救国与创世基金募捐 / Genesis Fund -->
-<div class="card" style="border-color: var(--primary); text-align: left; padding: 25px; margin-top: 20px;">
-    <h4 class="lang-cn" style="color: var(--primary); margin-bottom: 10px;">多链链上公开捐赠地址 (ETH / USDT / USDC)：</h4>
-    
-    <!-- 复制容器：支持点击文本或按钮进行复制 -->
-    <div style="display: flex; align-items: center; justify-content: space-between; background: #000; padding: 10px 15px; border-radius: 6px; border: 1px dashed var(--primary); margin: 15px 0; gap: 10px; cursor: pointer;" onclick="copyDonateAddress()" title="点击复制地址">
-        <span id="wallet-address" style="font-family: monospace; color: var(--primary); word-break: break-all; font-size: 0.95rem;">0x1f21af78d09113fe5626b6128c3ab9cc27adc228</span>
-        <button id="copy-btn" style="background: var(--primary); color: #000; border: none; padding: 6px 14px; border-radius: 4px; font-weight: bold; cursor: pointer; white-space: nowrap; font-size: 0.85rem; transition: 0.3s;">复制地址</button>
-    </div>
+<!-- 5. 救国与创世基金募捐 / Genesis Fund -->
+    <section id="donate" class="bg-dark">
+        <div class="container">
+            <h3 class="lang-cn">救国与创世基金募捐 <span class="sub">Genesis Fund</span></h3>
+            <h3 class="lang-en hidden">Genesis Fund <span class="sub">Transparent Vault</span></h3>
 
-    <p class="lang-cn" style="font-size: 0.85rem; color: var(--text-sub);">* 凡参与早期捐赠与贡献者，将永恒铭刻于 GitHub <code>GENESIS_CONTRIBUTORS.md</code> 创世荣誉墙中。</p>
-</div>
+            <div class="vision-box" style="max-width: 900px; margin: 0 auto;">
+                <div class="quote-box" style="margin-bottom: 20px;">
+                    <p class="lang-cn" style="margin: 0; font-size: 1.05rem;">“参照孙中山救国募捐模式，所有资金全额用于 DAADR 公共物品建设与开源基础设施开发，资金流动链上全程公开可追溯。”</p>
+                    <p class="lang-en hidden" style="margin: 0; font-size: 1.05rem;">"Referencing historic fundraising models, all funds are transparently dedicated to DAADR public infrastructure, fully auditable on-chain."</p>
+                </div>
 
-<!-- JS 复制逻辑脚本 -->
-<script>
-    function copyDonateAddress() {
-        const addressText = document.getElementById('wallet-address').innerText;
-        const btn = document.getElementById('copy-btn');
-        
-        navigator.clipboard.writeText(addressText).then(() => {
-            const originalText = btn.innerText;
-            btn.innerText = "已复制！";
-            btn.style.background = "#00ff88"; // 变为亮绿色反馈
+                <div class="card" style="border-color: var(--primary); text-align: left; padding: 25px;">
+                    <h4 class="lang-cn" style="color: var(--primary); margin-bottom: 12px; font-size: 1.1rem;">多链链上公开捐赠地址 (ETH / USDT / USDC)：</h4>
+                    
+                    <!-- 紧凑美观的地址复制框 -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; background: #000; padding: 12px 18px; border-radius: 6px; border: 1px dashed var(--primary); margin: 15px 0; gap: 15px;">
+                        <span id="wallet-address" style="font-family: monospace; color: var(--primary); word-break: break-all; font-size: 0.95rem; letter-spacing: 0.5px;">0x1f21af78d09113fe5626b6128c3ab9cc27adc228</span>
+                        <button id="copy-btn" onclick="copyDonateAddress()" style="background: var(--primary); color: #000; border: none; padding: 8px 18px; border-radius: 4px; font-weight: bold; cursor: pointer; white-space: nowrap; font-size: 0.9rem; transition: 0.3s; flex-shrink: 0;">复制地址</button>
+                    </div>
+
+                    <p class="lang-cn" style="font-size: 0.85rem; color: var(--text-sub); margin: 0;">* 凡参与早期捐赠与贡献者，将永恒铭刻于 GitHub <code>GENESIS_CONTRIBUTORS.md</code> 创世荣誉墙中。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS 复制逻辑脚本 -->
+    <script>
+        function copyDonateAddress() {
+            const addressText = document.getElementById('wallet-address').innerText;
+            const btn = document.getElementById('copy-btn');
             
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.background = "var(--primary)";
-            }, 2000);
-        }).catch(err => {
-            console.error('复制失败: ', err);
-        });
-    }
+            navigator.clipboard.writeText(addressText).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = "已复制！";
+                btn.style.background = "#00ff88"; // 亮绿色反馈
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = "var(--primary)";
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+            });
+        }
+    </script>
 </script>
 
     <footer id="join">
