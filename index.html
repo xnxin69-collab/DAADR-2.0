@@ -282,8 +282,28 @@
         </div>
     </footer>
 
-    <!-- JS 复制逻辑脚本 -->
+    <!-- JavaScript 脚本：中英文切换与地址复制功能 -->
     <script>
+        // 1. 中英文语言切换逻辑
+        let currentLang = 'cn';
+        const langToggleBtn = document.getElementById('lang-toggle');
+
+        langToggleBtn.addEventListener('click', () => {
+            const cnElements = document.querySelectorAll('.lang-cn');
+            const enElements = document.querySelectorAll('.lang-en');
+
+            if (currentLang === 'cn') {
+                cnElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+                currentLang = 'en';
+            } else {
+                enElements.forEach(el => el.classList.add('hidden'));
+                cnElements.forEach(el => el.classList.remove('hidden'));
+                currentLang = 'cn';
+            }
+        });
+
+        // 2. 捐赠地址一键复制逻辑
         function copyDonateAddress() {
             const addressText = document.getElementById('wallet-address').innerText;
             const btn = document.getElementById('copy-btn');
